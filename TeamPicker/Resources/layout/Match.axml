@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relativeLayout1">
+        <Toolbar
+            android:minHeight="?android:attr/actionBarSize"
+            android:background="?android:attr/colorPrimary"
+            android:minWidth="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbarMatch">
+            <RelativeLayout
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/relativeLayout2">
+                <TextView
+                    android:text="Selected Teams"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/toolbarMatchTitle"
+                    android:textSize="20dp"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginRight="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true" />
+                <ImageButton
+                    android:src="@drawable/ic_share_white_24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnShareMatch"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@+id/btnDeleteMatch"
+                    android:background="?android:selectableItemBackground"
+                    android:layout_centerVertical="true" />
+                <ImageButton
+                    android:src="@drawable/ic_delete_white_24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnDeleteMatch"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@+id/btnCancelMatch"
+                    android:background="?android:selectableItemBackground"
+                    android:layout_centerVertical="true" />
+                <ImageButton
+                    android:src="@drawable/ic_clear_white_24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/btnCancelMatch"
+                    android:layout_marginRight="20dp"
+                    android:background="?android:selectableItemBackground"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </Toolbar>
+        <ListView
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbarMatch"
+            android:layout_above="@+id/btnMatchRePick"
+            android:id="@+id/listTeams" />
+        <Button
+            android:text="Save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/adView"
+            android:id="@+id/btnMatchSave"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+        <Button
+            android:text="Random Selection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnMatchSave"
+            android:id="@+id/btnMatchRePick"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-5054611580618782/2900682702" />
+    </RelativeLayout>
+</LinearLayout>

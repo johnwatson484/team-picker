@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relativeLayout1">
+        <Toolbar
+            android:minHeight="?android:attr/actionBarSize"
+            android:background="?android:attr/colorPrimary"
+            android:minWidth="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbarPlayer">
+            <RelativeLayout
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/relativeLayout2">
+                <TextView
+                    android:text="Player Details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/toolbarPlayerTitle"
+                    android:textSize="20dp"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginRight="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true" />
+                <ImageButton
+                    android:src="@drawable/ic_delete_white_24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnDeletePlayer"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@+id/btnCancelPlayer"
+                    android:background="?android:selectableItemBackground"
+                    android:layout_centerVertical="true" />
+                <ImageButton
+                    android:src="@drawable/ic_clear_white_24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/btnCancelPlayer"
+                    android:layout_marginRight="20dp"
+                    android:background="?android:selectableItemBackground"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+        </Toolbar>
+        <Button
+            android:text="Save Player"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/btnSavePlayer"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/adView"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+        <TextView
+            android:text="Player Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtPlayerName"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:layout_below="@+id/toolbarPlayer"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtPlayerName"
+            android:id="@+id/txtPlayerNameInput"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:inputType="textCapWords"
+            android:textSize="20dp"
+            android:layout_marginBottom="5dp"
+            android:maxLength="25" />
+        <TextView
+            android:text="Rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtPlayerNameInput"
+            android:id="@+id/txtRatingLabel"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="20dp" />
+        <EditText
+            android:inputType="number"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtRatingLabel"
+            android:id="@+id/numRatingInput"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="20dp"
+            android:numeric="integer"
+            android:maxLength="3"
+            android:selectAllOnFocus="true" />
+        <TextView
+            android:text="(1-20)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/txtRatingLabel"
+            android:id="@+id/txtRatingLimit"
+            android:layout_marginLeft="5dp"
+            android:layout_alignBottom="@id/txtRatingLabel" />
+        <TextView
+            android:text="Unique Role"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtUniqueRole"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:layout_below="@+id/numRatingInput"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minHeight="50dp"
+            android:width="50dp"
+            android:id="@+id/chkUniqueRole"
+            android:layout_below="@+id/txtUniqueRole"
+            android:layout_marginLeft="20dp" />
+		<TextView
+            android:text="Notes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chkUniqueRole"
+            android:id="@+id/txtNotesLabel"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="20dp" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtNotesLabel"
+            android:id="@+id/txtNotes"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:inputType="textCapWords"
+            android:textSize="15dp"
+            android:layout_marginBottom="5dp"
+            android:maxLength="200" />
+        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-5054611580618782/4013905081" />
+    </RelativeLayout>
+</LinearLayout>

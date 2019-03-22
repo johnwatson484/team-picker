@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relativeLayout1">
+        <Toolbar
+            android:minHeight="?android:attr/actionBarSize"
+            android:background="?android:attr/colorPrimary"
+            android:minWidth="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbarSettings">
+            <RelativeLayout
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/relativeLayout2">
+                <TextView
+                    android:text="Settings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/toolbarPlayerTitle"
+                    android:textSize="20dp"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginRight="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true" />
+                <ImageButton
+                    android:src="@drawable/ic_clear_white_24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/btnCancelSettings"
+                    android:layout_marginRight="20dp"
+                    android:background="?android:selectableItemBackground"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+        </Toolbar>
+        <Button
+            android:text="Save Settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/btnSaveSettings"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_above="@+id/adView" />
+        <TextView
+            android:text="Number of Teams"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtNumberOfTeams"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:layout_below="@+id/toolbarSettings"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp" />
+        <EditText
+            android:inputType="number"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtNumberOfTeams"
+            android:id="@+id/numNumberOfTeams"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="20dp"
+            android:numeric="integer"
+            android:maxLength="2"
+            android:selectAllOnFocus="true" />
+        <TextView
+            android:text="(1-20)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/txtNumberOfTeams"
+            android:id="@+id/txtNumberLimit"
+            android:layout_marginLeft="5dp"
+            android:layout_alignBottom="@id/txtNumberOfTeams" />
+		<TextView
+            android:text="Max Rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtMaxRating"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:layout_below="@+id/numNumberOfTeams"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp" />
+        <EditText
+            android:inputType="number"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtMaxRating"
+            android:id="@+id/numMaxRating"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="20dp"
+            android:numeric="integer"
+            android:maxLength="3"
+            android:selectAllOnFocus="true" />
+        <TextView
+            android:text="(1-999)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/txtMaxRating"
+            android:id="@+id/txtRatingLimit"
+            android:layout_marginLeft="5dp"
+            android:layout_alignBottom="@id/txtMaxRating" />
+        <TextView
+            android:text="Balance Teams"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtBalanceTeams"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:layout_below="@id/numMaxRating"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp" />
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/txtBalanceTeams"
+            android:id="@+id/swBalance"
+            android:layout_alignBottom="@id/txtBalanceTeams"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp" />
+		<TextView
+            android:text="High Accuracy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtHighAccuracy"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:layout_below="@id/txtBalanceTeams"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp" />
+		 <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/txtHighAccuracy"
+            android:id="@+id/swHighAccuracy"
+            android:layout_alignBottom="@id/txtHighAccuracy"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp" />
+        <TextView
+            android:text="Traffic Light Ratings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtTrafficLightRatings"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:layout_below="@id/txtHighAccuracy"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp" />
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/txtTrafficLightRatings"
+            android:id="@+id/swTrafficLightRatings"
+            android:layout_alignBottom="@id/txtTrafficLightRatings"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp" />
+		<TextView
+            android:text="Display Notes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtDisplayNotes"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:layout_below="@id/txtTrafficLightRatings"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp" />
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/txtDisplayNotes"
+            android:id="@+id/swDisplayNotes"
+            android:layout_alignBottom="@id/txtDisplayNotes"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp" />
+        <TextView
+            android:text="Player Order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtPlayerOrder"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:layout_below="@id/txtDisplayNotes"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp" />
+        <RadioGroup
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtPlayerOrder"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/radioGroup1">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Most Selected"
+                android:id="@+id/rbMostSelected" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alphabetical"
+                android:id="@+id/rbAlphabetical" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rating"
+                android:id="@+id/rbRating" />
+        </RadioGroup>
+		<TextView
+            android:text="Privacy Policy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtPrivacy"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"
+            android:layout_below="@id/radioGroup1"
+            android:textStyle="bold"
+			android:textColor="#0D47A1"
+            android:layout_marginBottom="5dp" />
+        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-5054611580618782/7214783494" />
+    </RelativeLayout>
+</LinearLayout>

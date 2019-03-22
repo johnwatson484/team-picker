@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relativeLayout1">
+        <Toolbar
+            android:minHeight="?android:attr/actionBarSize"
+            android:background="?android:attr/colorPrimary"
+            android:minWidth="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbarPrivacy">
+            <RelativeLayout
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/relativeLayout2">
+                <TextView
+                    android:text="Privacy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/toolbarPrivacyTitle"
+                    android:textSize="20dp"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginRight="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true" />                
+                <ImageButton
+                    android:src="@drawable/ic_clear_white_24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/btnCancelPrivacy"
+                    android:layout_marginRight="20dp"
+                    android:background="?android:selectableItemBackground"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+        </Toolbar>        
+        <TextView
+            android:text="Privacy Policy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtPrivacy"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:layout_below="@+id/toolbarPrivacy"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp" />        
+		<TextView
+			android:text=""
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/txtPrivacy"
+			android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+			android:id="@+id/txtPrivacyDetails" />
+    </RelativeLayout>
+</LinearLayout>
