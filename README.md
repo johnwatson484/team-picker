@@ -2,7 +2,11 @@
 
 A Xamarin Android application to automatically generate balanced teams based on rating for sports and games.
 
-### Prerequisites
+## Status
+
+[![Build status](https://johnwatson484.visualstudio.com/John%20D%20Watson/_apis/build/status/Team%20Picker)](https://johnwatson484.visualstudio.com/John%20D%20Watson/_build/latest?definitionId=11)
+
+## Prerequisites
 
 Xamarin
 
