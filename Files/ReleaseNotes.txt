@@ -1,9 +1,1 @@
--High accuracy mode added for optimum team selection
-
--Notes added to players
-
--Balanced team accuracy improved
-
--Maximum number of teams increased to 20
-
--Custom rating support added
+-Supported Android version updated
