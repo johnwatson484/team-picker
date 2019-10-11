@@ -33,33 +33,6 @@ namespace TeamPicker
 		public partial class Attribute
 		{
 			
-			// aapt resource value: 0x7f010006
-			public const int adSize = 2130771974;
-			
-			// aapt resource value: 0x7f010007
-			public const int adSizes = 2130771975;
-			
-			// aapt resource value: 0x7f010008
-			public const int adUnitId = 2130771976;
-			
-			// aapt resource value: 0x7f010003
-			public const int buttonSize = 2130771971;
-			
-			// aapt resource value: 0x7f010002
-			public const int circleCrop = 2130771970;
-			
-			// aapt resource value: 0x7f010004
-			public const int colorScheme = 2130771972;
-			
-			// aapt resource value: 0x7f010001
-			public const int imageAspectRatio = 2130771969;
-			
-			// aapt resource value: 0x7f010000
-			public const int imageAspectRatioAdjust = 2130771968;
-			
-			// aapt resource value: 0x7f010005
-			public const int scopeUris = 2130771973;
-			
 			static Attribute()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -70,138 +43,29 @@ namespace TeamPicker
 			}
 		}
 		
-		public partial class Color
-		{
-			
-			// aapt resource value: 0x7f050008
-			public const int common_google_signin_btn_text_dark = 2131034120;
-			
-			// aapt resource value: 0x7f050000
-			public const int common_google_signin_btn_text_dark_default = 2131034112;
-			
-			// aapt resource value: 0x7f050001
-			public const int common_google_signin_btn_text_dark_disabled = 2131034113;
-			
-			// aapt resource value: 0x7f050002
-			public const int common_google_signin_btn_text_dark_focused = 2131034114;
-			
-			// aapt resource value: 0x7f050003
-			public const int common_google_signin_btn_text_dark_pressed = 2131034115;
-			
-			// aapt resource value: 0x7f050009
-			public const int common_google_signin_btn_text_light = 2131034121;
-			
-			// aapt resource value: 0x7f050004
-			public const int common_google_signin_btn_text_light_default = 2131034116;
-			
-			// aapt resource value: 0x7f050005
-			public const int common_google_signin_btn_text_light_disabled = 2131034117;
-			
-			// aapt resource value: 0x7f050006
-			public const int common_google_signin_btn_text_light_focused = 2131034118;
-			
-			// aapt resource value: 0x7f050007
-			public const int common_google_signin_btn_text_light_pressed = 2131034119;
-			
-			// aapt resource value: 0x7f05000a
-			public const int common_google_signin_btn_tint = 2131034122;
-			
-			static Color()
-			{
-				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
-			}
-			
-			private Color()
-			{
-			}
-		}
-		
 		public partial class Drawable
 		{
 			
-			// aapt resource value: 0x7f020000
-			public const int common_full_open_on_phone = 2130837504;
+			// aapt resource value: 0x7F010000
+			public const int ic_clear_white_24dp = 2130771968;
 			
-			// aapt resource value: 0x7f020001
-			public const int common_google_signin_btn_icon_dark = 2130837505;
+			// aapt resource value: 0x7F010001
+			public const int ic_delete_white_24dp = 2130771969;
 			
-			// aapt resource value: 0x7f020002
-			public const int common_google_signin_btn_icon_dark_focused = 2130837506;
+			// aapt resource value: 0x7F010002
+			public const int ic_history_white_24dp = 2130771970;
 			
-			// aapt resource value: 0x7f020003
-			public const int common_google_signin_btn_icon_dark_normal = 2130837507;
+			// aapt resource value: 0x7F010003
+			public const int ic_launcher = 2130771971;
 			
-			// aapt resource value: 0x7f020004
-			public const int common_google_signin_btn_icon_dark_normal_background = 2130837508;
+			// aapt resource value: 0x7F010004
+			public const int ic_person_add_white_24dp = 2130771972;
 			
-			// aapt resource value: 0x7f020005
-			public const int common_google_signin_btn_icon_disabled = 2130837509;
+			// aapt resource value: 0x7F010005
+			public const int ic_settings_white_24dp = 2130771973;
 			
-			// aapt resource value: 0x7f020006
-			public const int common_google_signin_btn_icon_light = 2130837510;
-			
-			// aapt resource value: 0x7f020007
-			public const int common_google_signin_btn_icon_light_focused = 2130837511;
-			
-			// aapt resource value: 0x7f020008
-			public const int common_google_signin_btn_icon_light_normal = 2130837512;
-			
-			// aapt resource value: 0x7f020009
-			public const int common_google_signin_btn_icon_light_normal_background = 2130837513;
-			
-			// aapt resource value: 0x7f02000a
-			public const int common_google_signin_btn_text_dark = 2130837514;
-			
-			// aapt resource value: 0x7f02000b
-			public const int common_google_signin_btn_text_dark_focused = 2130837515;
-			
-			// aapt resource value: 0x7f02000c
-			public const int common_google_signin_btn_text_dark_normal = 2130837516;
-			
-			// aapt resource value: 0x7f02000d
-			public const int common_google_signin_btn_text_dark_normal_background = 2130837517;
-			
-			// aapt resource value: 0x7f02000e
-			public const int common_google_signin_btn_text_disabled = 2130837518;
-			
-			// aapt resource value: 0x7f02000f
-			public const int common_google_signin_btn_text_light = 2130837519;
-			
-			// aapt resource value: 0x7f020010
-			public const int common_google_signin_btn_text_light_focused = 2130837520;
-			
-			// aapt resource value: 0x7f020011
-			public const int common_google_signin_btn_text_light_normal = 2130837521;
-			
-			// aapt resource value: 0x7f020012
-			public const int common_google_signin_btn_text_light_normal_background = 2130837522;
-			
-			// aapt resource value: 0x7f020013
-			public const int googleg_disabled_color_18 = 2130837523;
-			
-			// aapt resource value: 0x7f020014
-			public const int googleg_standard_color_18 = 2130837524;
-			
-			// aapt resource value: 0x7f020015
-			public const int ic_clear_white_24dp = 2130837525;
-			
-			// aapt resource value: 0x7f020016
-			public const int ic_delete_white_24dp = 2130837526;
-			
-			// aapt resource value: 0x7f020017
-			public const int ic_history_white_24dp = 2130837527;
-			
-			// aapt resource value: 0x7f020018
-			public const int ic_launcher = 2130837528;
-			
-			// aapt resource value: 0x7f020019
-			public const int ic_person_add_white_24dp = 2130837529;
-			
-			// aapt resource value: 0x7f02001a
-			public const int ic_settings_white_24dp = 2130837530;
-			
-			// aapt resource value: 0x7f02001b
-			public const int ic_share_white_24dp = 2130837531;
+			// aapt resource value: 0x7F010006
+			public const int ic_share_white_24dp = 2130771974;
 			
 			static Drawable()
 			{
@@ -216,293 +80,266 @@ namespace TeamPicker
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f080012
-			public const int adView = 2131230738;
+			// aapt resource value: 0x7F020000
+			public const int adView = 2130837504;
 			
-			// aapt resource value: 0x7f080000
-			public const int adjust_height = 2131230720;
+			// aapt resource value: 0x7F020001
+			public const int btnCancelMatch = 2130837505;
 			
-			// aapt resource value: 0x7f080001
-			public const int adjust_width = 2131230721;
+			// aapt resource value: 0x7F020002
+			public const int btnCancelMatchList = 2130837506;
 			
-			// aapt resource value: 0x7f080006
-			public const int auto = 2131230726;
+			// aapt resource value: 0x7F020003
+			public const int btnCancelPlayer = 2130837507;
 			
-			// aapt resource value: 0x7f08000f
-			public const int btnCancelMatch = 2131230735;
+			// aapt resource value: 0x7F020004
+			public const int btnCancelPrivacy = 2130837508;
 			
-			// aapt resource value: 0x7f080016
-			public const int btnCancelMatchList = 2131230742;
+			// aapt resource value: 0x7F020005
+			public const int btnCancelSettings = 2130837509;
 			
-			// aapt resource value: 0x7f080022
-			public const int btnCancelPlayer = 2131230754;
+			// aapt resource value: 0x7F020006
+			public const int btnCreatePlayer = 2130837510;
 			
-			// aapt resource value: 0x7f080034
-			public const int btnCancelPrivacy = 2131230772;
+			// aapt resource value: 0x7F020007
+			public const int btnDeleteMatch = 2130837511;
 			
-			// aapt resource value: 0x7f080044
-			public const int btnCancelSettings = 2131230788;
+			// aapt resource value: 0x7F020008
+			public const int btnDeletePlayer = 2130837512;
 			
-			// aapt resource value: 0x7f080039
-			public const int btnCreatePlayer = 2131230777;
+			// aapt resource value: 0x7F020009
+			public const int btnMatchHistory = 2130837513;
 			
-			// aapt resource value: 0x7f08000e
-			public const int btnDeleteMatch = 2131230734;
+			// aapt resource value: 0x7F02000A
+			public const int btnMatchRePick = 2130837514;
 			
-			// aapt resource value: 0x7f080021
-			public const int btnDeletePlayer = 2131230753;
+			// aapt resource value: 0x7F02000B
+			public const int btnMatchSave = 2130837515;
 			
-			// aapt resource value: 0x7f08003a
-			public const int btnMatchHistory = 2131230778;
+			// aapt resource value: 0x7F02000C
+			public const int btnPickTeams = 2130837516;
 			
-			// aapt resource value: 0x7f080010
-			public const int btnMatchRePick = 2131230736;
+			// aapt resource value: 0x7F02000D
+			public const int btnSavePlayer = 2130837517;
 			
-			// aapt resource value: 0x7f080013
-			public const int btnMatchSave = 2131230739;
+			// aapt resource value: 0x7F02000E
+			public const int btnSaveSettings = 2130837518;
 			
-			// aapt resource value: 0x7f080041
-			public const int btnPickTeams = 2131230785;
+			// aapt resource value: 0x7F02000F
+			public const int btnSettings = 2130837519;
 			
-			// aapt resource value: 0x7f080023
-			public const int btnSavePlayer = 2131230755;
+			// aapt resource value: 0x7F020010
+			public const int btnShareMatch = 2130837520;
 			
-			// aapt resource value: 0x7f080045
-			public const int btnSaveSettings = 2131230789;
+			// aapt resource value: 0x7F020011
+			public const int chkAllPlayers = 2130837521;
 			
-			// aapt resource value: 0x7f08003b
-			public const int btnSettings = 2131230779;
+			// aapt resource value: 0x7F020012
+			public const int chkPlayer = 2130837522;
 			
-			// aapt resource value: 0x7f08000d
-			public const int btnShareMatch = 2131230733;
+			// aapt resource value: 0x7F020013
+			public const int chkUniqueRole = 2130837523;
 			
-			// aapt resource value: 0x7f08003e
-			public const int chkAllPlayers = 2131230782;
+			// aapt resource value: 0x7F020014
+			public const int listMatches = 2130837524;
 			
-			// aapt resource value: 0x7f08002f
-			public const int chkPlayer = 2131230767;
+			// aapt resource value: 0x7F020015
+			public const int listPlayers = 2130837525;
 			
-			// aapt resource value: 0x7f08002a
-			public const int chkUniqueRole = 2131230762;
+			// aapt resource value: 0x7F020016
+			public const int listTeams = 2130837526;
 			
-			// aapt resource value: 0x7f080007
-			public const int dark = 2131230727;
+			// aapt resource value: 0x7F020017
+			public const int matchNumber = 2130837527;
 			
-			// aapt resource value: 0x7f080003
-			public const int icon_only = 2131230723;
+			// aapt resource value: 0x7F020018
+			public const int notes = 2130837528;
 			
-			// aapt resource value: 0x7f080008
-			public const int light = 2131230728;
+			// aapt resource value: 0x7F020019
+			public const int numMaxRating = 2130837529;
 			
-			// aapt resource value: 0x7f080018
-			public const int listMatches = 2131230744;
+			// aapt resource value: 0x7F02001A
+			public const int numNumberOfTeams = 2130837530;
 			
-			// aapt resource value: 0x7f08003f
-			public const int listPlayers = 2131230783;
+			// aapt resource value: 0x7F02001B
+			public const int numRatingInput = 2130837531;
 			
-			// aapt resource value: 0x7f080011
-			public const int listTeams = 2131230737;
+			// aapt resource value: 0x7F02001C
+			public const int playerName = 2130837532;
 			
-			// aapt resource value: 0x7f080019
-			public const int matchNumber = 2131230745;
+			// aapt resource value: 0x7F02001D
+			public const int radioGroup1 = 2130837533;
 			
-			// aapt resource value: 0x7f080002
-			public const int none = 2131230722;
+			// aapt resource value: 0x7F02001E
+			public const int rating = 2130837534;
 			
-			// aapt resource value: 0x7f080031
-			public const int notes = 2131230769;
+			// aapt resource value: 0x7F02001F
+			public const int rbAlphabetical = 2130837535;
 			
-			// aapt resource value: 0x7f08004a
-			public const int numMaxRating = 2131230794;
+			// aapt resource value: 0x7F020020
+			public const int rbMostSelected = 2130837536;
 			
-			// aapt resource value: 0x7f080047
-			public const int numNumberOfTeams = 2131230791;
+			// aapt resource value: 0x7F020021
+			public const int rbRating = 2130837537;
 			
-			// aapt resource value: 0x7f080027
-			public const int numRatingInput = 2131230759;
+			// aapt resource value: 0x7F020022
+			public const int relativeLayout1 = 2130837538;
 			
-			// aapt resource value: 0x7f08002e
-			public const int playerName = 2131230766;
+			// aapt resource value: 0x7F020023
+			public const int relativeLayout2 = 2130837539;
 			
-			// aapt resource value: 0x7f080054
-			public const int radioGroup1 = 2131230804;
+			// aapt resource value: 0x7F020024
+			public const int selectedNumber = 2130837540;
 			
-			// aapt resource value: 0x7f08002d
-			public const int rating = 2131230765;
+			// aapt resource value: 0x7F020025
+			public const int selectedText = 2130837541;
 			
-			// aapt resource value: 0x7f080056
-			public const int rbAlphabetical = 2131230806;
+			// aapt resource value: 0x7F020026
+			public const int splashDeveloper = 2130837542;
 			
-			// aapt resource value: 0x7f080055
-			public const int rbMostSelected = 2131230805;
+			// aapt resource value: 0x7F020027
+			public const int splashIcon = 2130837543;
 			
-			// aapt resource value: 0x7f080057
-			public const int rbRating = 2131230807;
+			// aapt resource value: 0x7F020028
+			public const int splashTitle = 2130837544;
 			
-			// aapt resource value: 0x7f080009
-			public const int relativeLayout1 = 2131230729;
+			// aapt resource value: 0x7F020029
+			public const int swBalance = 2130837545;
 			
-			// aapt resource value: 0x7f08000b
-			public const int relativeLayout2 = 2131230731;
+			// aapt resource value: 0x7F02002A
+			public const int swDisplayNotes = 2130837546;
 			
-			// aapt resource value: 0x7f080040
-			public const int selectedNumber = 2131230784;
+			// aapt resource value: 0x7F02002B
+			public const int swHighAccuracy = 2130837547;
 			
-			// aapt resource value: 0x7f080042
-			public const int selectedText = 2131230786;
+			// aapt resource value: 0x7F02002C
+			public const int swTrafficLightRatings = 2130837548;
 			
-			// aapt resource value: 0x7f08005a
-			public const int splashDeveloper = 2131230810;
+			// aapt resource value: 0x7F02002D
+			public const int teamScore = 2130837549;
 			
-			// aapt resource value: 0x7f080058
-			public const int splashIcon = 2131230808;
+			// aapt resource value: 0x7F02002E
+			public const int toolbarMatch = 2130837550;
 			
-			// aapt resource value: 0x7f080059
-			public const int splashTitle = 2131230809;
+			// aapt resource value: 0x7F02002F
+			public const int toolbarMatchList = 2130837551;
 			
-			// aapt resource value: 0x7f080004
-			public const int standard = 2131230724;
+			// aapt resource value: 0x7F020030
+			public const int toolbarMatchListTitle = 2130837552;
 			
-			// aapt resource value: 0x7f08004c
-			public const int swBalance = 2131230796;
+			// aapt resource value: 0x7F020031
+			public const int toolbarMatchTitle = 2130837553;
 			
-			// aapt resource value: 0x7f080052
-			public const int swDisplayNotes = 2131230802;
+			// aapt resource value: 0x7F020032
+			public const int toolbarPlayer = 2130837554;
 			
-			// aapt resource value: 0x7f08004e
-			public const int swHighAccuracy = 2131230798;
+			// aapt resource value: 0x7F020033
+			public const int toolbarPlayerTitle = 2130837555;
 			
-			// aapt resource value: 0x7f080050
-			public const int swTrafficLightRatings = 2131230800;
+			// aapt resource value: 0x7F020034
+			public const int toolbarPrivacy = 2130837556;
 			
-			// aapt resource value: 0x7f08005e
-			public const int teamScore = 2131230814;
+			// aapt resource value: 0x7F020035
+			public const int toolbarPrivacyTitle = 2130837557;
 			
-			// aapt resource value: 0x7f08000a
-			public const int toolbarMatch = 2131230730;
+			// aapt resource value: 0x7F020036
+			public const int toolbarSelection = 2130837558;
 			
-			// aapt resource value: 0x7f080014
-			public const int toolbarMatchList = 2131230740;
+			// aapt resource value: 0x7F020037
+			public const int toolbarSelectionTitle = 2130837559;
 			
-			// aapt resource value: 0x7f080015
-			public const int toolbarMatchListTitle = 2131230741;
+			// aapt resource value: 0x7F020038
+			public const int toolbarSettings = 2130837560;
 			
-			// aapt resource value: 0x7f08000c
-			public const int toolbarMatchTitle = 2131230732;
+			// aapt resource value: 0x7F020039
+			public const int txtBalanceTeams = 2130837561;
 			
-			// aapt resource value: 0x7f08001f
-			public const int toolbarPlayer = 2131230751;
+			// aapt resource value: 0x7F02003A
+			public const int txtDisplayNotes = 2130837562;
 			
-			// aapt resource value: 0x7f080020
-			public const int toolbarPlayerTitle = 2131230752;
+			// aapt resource value: 0x7F02003B
+			public const int txtHighAccuracy = 2130837563;
 			
-			// aapt resource value: 0x7f080032
-			public const int toolbarPrivacy = 2131230770;
+			// aapt resource value: 0x7F02003C
+			public const int txtMatchDate = 2130837564;
 			
-			// aapt resource value: 0x7f080033
-			public const int toolbarPrivacyTitle = 2131230771;
+			// aapt resource value: 0x7F02003D
+			public const int txtMatchTime = 2130837565;
 			
-			// aapt resource value: 0x7f080037
-			public const int toolbarSelection = 2131230775;
+			// aapt resource value: 0x7F02003E
+			public const int txtMaxRating = 2130837566;
 			
-			// aapt resource value: 0x7f080038
-			public const int toolbarSelectionTitle = 2131230776;
+			// aapt resource value: 0x7F02003F
+			public const int txtNoMatches = 2130837567;
 			
-			// aapt resource value: 0x7f080043
-			public const int toolbarSettings = 2131230787;
+			// aapt resource value: 0x7F020040
+			public const int txtNoPlayers = 2130837568;
 			
-			// aapt resource value: 0x7f08004b
-			public const int txtBalanceTeams = 2131230795;
+			// aapt resource value: 0x7F020041
+			public const int txtNotes = 2130837569;
 			
-			// aapt resource value: 0x7f080051
-			public const int txtDisplayNotes = 2131230801;
+			// aapt resource value: 0x7F020042
+			public const int txtNotesLabel = 2130837570;
 			
-			// aapt resource value: 0x7f08004d
-			public const int txtHighAccuracy = 2131230797;
+			// aapt resource value: 0x7F020043
+			public const int txtNumberLimit = 2130837571;
 			
-			// aapt resource value: 0x7f08001c
-			public const int txtMatchDate = 2131230748;
+			// aapt resource value: 0x7F020044
+			public const int txtNumberOfTeams = 2130837572;
 			
-			// aapt resource value: 0x7f08001e
-			public const int txtMatchTime = 2131230750;
+			// aapt resource value: 0x7F020045
+			public const int txtPlayerName = 2130837573;
 			
-			// aapt resource value: 0x7f080049
-			public const int txtMaxRating = 2131230793;
+			// aapt resource value: 0x7F020046
+			public const int txtPlayerNameInput = 2130837574;
 			
-			// aapt resource value: 0x7f080017
-			public const int txtNoMatches = 2131230743;
+			// aapt resource value: 0x7F020047
+			public const int txtPlayerOrder = 2130837575;
 			
-			// aapt resource value: 0x7f08003c
-			public const int txtNoPlayers = 2131230780;
+			// aapt resource value: 0x7F020048
+			public const int txtPrivacy = 2130837576;
 			
-			// aapt resource value: 0x7f08002c
-			public const int txtNotes = 2131230764;
+			// aapt resource value: 0x7F020049
+			public const int txtPrivacyDetails = 2130837577;
 			
-			// aapt resource value: 0x7f08002b
-			public const int txtNotesLabel = 2131230763;
+			// aapt resource value: 0x7F02004A
+			public const int txtRatingLabel = 2130837578;
 			
-			// aapt resource value: 0x7f080048
-			public const int txtNumberLimit = 2131230792;
+			// aapt resource value: 0x7F02004B
+			public const int txtRatingLimit = 2130837579;
 			
-			// aapt resource value: 0x7f080046
-			public const int txtNumberOfTeams = 2131230790;
+			// aapt resource value: 0x7F02004C
+			public const int txtSavedText = 2130837580;
 			
-			// aapt resource value: 0x7f080024
-			public const int txtPlayerName = 2131230756;
+			// aapt resource value: 0x7F02004D
+			public const int txtScore = 2130837581;
 			
-			// aapt resource value: 0x7f080025
-			public const int txtPlayerNameInput = 2131230757;
+			// aapt resource value: 0x7F02004E
+			public const int txtSelectAll = 2130837582;
 			
-			// aapt resource value: 0x7f080053
-			public const int txtPlayerOrder = 2131230803;
+			// aapt resource value: 0x7F02004F
+			public const int txtTeamName = 2130837583;
 			
-			// aapt resource value: 0x7f080035
-			public const int txtPrivacy = 2131230773;
+			// aapt resource value: 0x7F020050
+			public const int txtTeamPlayers = 2130837584;
 			
-			// aapt resource value: 0x7f080036
-			public const int txtPrivacyDetails = 2131230774;
+			// aapt resource value: 0x7F020051
+			public const int txtTeamRating = 2130837585;
 			
-			// aapt resource value: 0x7f080026
-			public const int txtRatingLabel = 2131230758;
+			// aapt resource value: 0x7F020052
+			public const int txtTeamScore = 2130837586;
 			
-			// aapt resource value: 0x7f080028
-			public const int txtRatingLimit = 2131230760;
+			// aapt resource value: 0x7F020053
+			public const int txtTotalPlayers = 2130837587;
 			
-			// aapt resource value: 0x7f08001a
-			public const int txtSavedText = 2131230746;
+			// aapt resource value: 0x7F020054
+			public const int txtTrafficLightRatings = 2130837588;
 			
-			// aapt resource value: 0x7f08001d
-			public const int txtScore = 2131230749;
+			// aapt resource value: 0x7F020055
+			public const int txtUniqueRole = 2130837589;
 			
-			// aapt resource value: 0x7f08003d
-			public const int txtSelectAll = 2131230781;
-			
-			// aapt resource value: 0x7f08005b
-			public const int txtTeamName = 2131230811;
-			
-			// aapt resource value: 0x7f08005c
-			public const int txtTeamPlayers = 2131230812;
-			
-			// aapt resource value: 0x7f08005d
-			public const int txtTeamRating = 2131230813;
-			
-			// aapt resource value: 0x7f08005f
-			public const int txtTeamScore = 2131230815;
-			
-			// aapt resource value: 0x7f08001b
-			public const int txtTotalPlayers = 2131230747;
-			
-			// aapt resource value: 0x7f08004f
-			public const int txtTrafficLightRatings = 2131230799;
-			
-			// aapt resource value: 0x7f080029
-			public const int txtUniqueRole = 2131230761;
-			
-			// aapt resource value: 0x7f080030
-			public const int uniqueRole = 2131230768;
-			
-			// aapt resource value: 0x7f080005
-			public const int wide = 2131230725;
+			// aapt resource value: 0x7F020056
+			public const int uniqueRole = 2130837590;
 			
 			static Id()
 			{
@@ -514,53 +351,37 @@ namespace TeamPicker
 			}
 		}
 		
-		public partial class Integer
-		{
-			
-			// aapt resource value: 0x7f070000
-			public const int google_play_services_version = 2131165184;
-			
-			static Integer()
-			{
-				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
-			}
-			
-			private Integer()
-			{
-			}
-		}
-		
 		public partial class Layout
 		{
 			
-			// aapt resource value: 0x7f030000
+			// aapt resource value: 0x7F030000
 			public const int Match = 2130903040;
 			
-			// aapt resource value: 0x7f030001
+			// aapt resource value: 0x7F030001
 			public const int MatchList = 2130903041;
 			
-			// aapt resource value: 0x7f030002
+			// aapt resource value: 0x7F030002
 			public const int MatchListItem = 2130903042;
 			
-			// aapt resource value: 0x7f030003
+			// aapt resource value: 0x7F030003
 			public const int Player = 2130903043;
 			
-			// aapt resource value: 0x7f030004
+			// aapt resource value: 0x7F030004
 			public const int PlayerListItem = 2130903044;
 			
-			// aapt resource value: 0x7f030005
+			// aapt resource value: 0x7F030005
 			public const int Privacy = 2130903045;
 			
-			// aapt resource value: 0x7f030006
+			// aapt resource value: 0x7F030006
 			public const int Selection = 2130903046;
 			
-			// aapt resource value: 0x7f030007
+			// aapt resource value: 0x7F030007
 			public const int Settings = 2130903047;
 			
-			// aapt resource value: 0x7f030008
+			// aapt resource value: 0x7F030008
 			public const int Splash = 2130903048;
 			
-			// aapt resource value: 0x7f030009
+			// aapt resource value: 0x7F030009
 			public const int TeamItem = 2130903049;
 			
 			static Layout()
@@ -576,92 +397,11 @@ namespace TeamPicker
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f04001c
-			public const int ApplicationName = 2130968604;
+			// aapt resource value: 0x7F040000
+			public const int ApplicationName = 2130968576;
 			
-			// aapt resource value: 0x7f04001b
-			public const int Hello = 2130968603;
-			
-			// aapt resource value: 0x7f040000
-			public const int accept = 2130968576;
-			
-			// aapt resource value: 0x7f04000a
-			public const int common_google_play_services_enable_button = 2130968586;
-			
-			// aapt resource value: 0x7f04000b
-			public const int common_google_play_services_enable_text = 2130968587;
-			
-			// aapt resource value: 0x7f04000c
-			public const int common_google_play_services_enable_title = 2130968588;
-			
-			// aapt resource value: 0x7f04000d
-			public const int common_google_play_services_install_button = 2130968589;
-			
-			// aapt resource value: 0x7f04000e
-			public const int common_google_play_services_install_text = 2130968590;
-			
-			// aapt resource value: 0x7f04000f
-			public const int common_google_play_services_install_title = 2130968591;
-			
-			// aapt resource value: 0x7f040010
-			public const int common_google_play_services_notification_ticker = 2130968592;
-			
-			// aapt resource value: 0x7f04001a
-			public const int common_google_play_services_unknown_issue = 2130968602;
-			
-			// aapt resource value: 0x7f040011
-			public const int common_google_play_services_unsupported_text = 2130968593;
-			
-			// aapt resource value: 0x7f040012
-			public const int common_google_play_services_update_button = 2130968594;
-			
-			// aapt resource value: 0x7f040013
-			public const int common_google_play_services_update_text = 2130968595;
-			
-			// aapt resource value: 0x7f040014
-			public const int common_google_play_services_update_title = 2130968596;
-			
-			// aapt resource value: 0x7f040015
-			public const int common_google_play_services_updating_text = 2130968597;
-			
-			// aapt resource value: 0x7f040016
-			public const int common_google_play_services_wear_update_text = 2130968598;
-			
-			// aapt resource value: 0x7f040017
-			public const int common_open_on_phone = 2130968599;
-			
-			// aapt resource value: 0x7f040018
-			public const int common_signin_button_text = 2130968600;
-			
-			// aapt resource value: 0x7f040019
-			public const int common_signin_button_text_long = 2130968601;
-			
-			// aapt resource value: 0x7f040001
-			public const int create_calendar_message = 2130968577;
-			
-			// aapt resource value: 0x7f040002
-			public const int create_calendar_title = 2130968578;
-			
-			// aapt resource value: 0x7f040003
-			public const int debug_menu_ad_information = 2130968579;
-			
-			// aapt resource value: 0x7f040004
-			public const int debug_menu_creative_preview = 2130968580;
-			
-			// aapt resource value: 0x7f040005
-			public const int debug_menu_title = 2130968581;
-			
-			// aapt resource value: 0x7f040006
-			public const int debug_menu_troubleshooting = 2130968582;
-			
-			// aapt resource value: 0x7f040007
-			public const int decline = 2130968583;
-			
-			// aapt resource value: 0x7f040008
-			public const int store_picture_message = 2130968584;
-			
-			// aapt resource value: 0x7f040009
-			public const int store_picture_title = 2130968585;
+			// aapt resource value: 0x7F040001
+			public const int Hello = 2130968577;
 			
 			static String()
 			{
@@ -676,11 +416,8 @@ namespace TeamPicker
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7f060000
-			public const int Theme_IAPTheme = 2131099648;
-			
-			// aapt resource value: 0x7f060001
-			public const int Theme_MyTheme = 2131099649;
+			// aapt resource value: 0x7F050000
+			public const int Theme_MyTheme = 2131034112;
 			
 			static Style()
 			{
@@ -688,61 +425,6 @@ namespace TeamPicker
 			}
 			
 			private Style()
-			{
-			}
-		}
-		
-		public partial class Styleable
-		{
-			
-			public static int[] AdsAttrs = new int[] {
-					2130771974,
-					2130771975,
-					2130771976};
-			
-			// aapt resource value: 0
-			public const int AdsAttrs_adSize = 0;
-			
-			// aapt resource value: 1
-			public const int AdsAttrs_adSizes = 1;
-			
-			// aapt resource value: 2
-			public const int AdsAttrs_adUnitId = 2;
-			
-			public static int[] LoadingImageView = new int[] {
-					2130771968,
-					2130771969,
-					2130771970};
-			
-			// aapt resource value: 2
-			public const int LoadingImageView_circleCrop = 2;
-			
-			// aapt resource value: 1
-			public const int LoadingImageView_imageAspectRatio = 1;
-			
-			// aapt resource value: 0
-			public const int LoadingImageView_imageAspectRatioAdjust = 0;
-			
-			public static int[] SignInButton = new int[] {
-					2130771971,
-					2130771972,
-					2130771973};
-			
-			// aapt resource value: 0
-			public const int SignInButton_buttonSize = 0;
-			
-			// aapt resource value: 1
-			public const int SignInButton_colorScheme = 1;
-			
-			// aapt resource value: 2
-			public const int SignInButton_scopeUris = 2;
-			
-			static Styleable()
-			{
-				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
-			}
-			
-			private Styleable()
 			{
 			}
 		}
