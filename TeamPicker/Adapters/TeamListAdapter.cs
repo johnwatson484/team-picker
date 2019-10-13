@@ -97,9 +97,6 @@ namespace TeamPicker.Adapters
 
             var item = items[position];
 
-            var x = e.Text;
-            var y = e.Text.ToString();
-
             int newScore = 0;
 
             if (!string.IsNullOrEmpty(e.Text.ToString()))
