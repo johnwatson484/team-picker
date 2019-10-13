@@ -22,7 +22,6 @@ namespace TeamPicker
     [Activity(Theme = "@style/Theme.MyTheme")]
     public class MatchActivity : Activity
     {
-        PlayerLogic pLogic = new PlayerLogic();
         MatchLogic mLogic = new MatchLogic();
         Match match;
         PlayerData selectedPlayers;
