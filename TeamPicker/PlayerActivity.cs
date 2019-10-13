@@ -1,30 +1,20 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Android.App;
 using Android.Content;
+using Android.Gms.Ads;
 using Android.OS;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using System;
 using TeamPicker.Classes;
-using System.Xml.Serialization;
-using System.IO;
-using Android.Content.Res;
 using TeamPicker.Logic;
-using TeamPicker.Helpers;
-using TeamPicker.Adapters;
-using Android.Gms.Ads;
 
 namespace TeamPicker
 {
     [Activity(Theme = "@style/Theme.MyTheme")]
     public class PlayerActivity : Activity
     {
-        PlayerLogic pLogic = new PlayerLogic();
-        SettingsLogic sLogic = new SettingsLogic();
+        readonly PlayerLogic pLogic = new PlayerLogic();
+        readonly SettingsLogic sLogic = new SettingsLogic();
         Player player;
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -38,7 +28,7 @@ namespace TeamPicker
             adView.LoadAd(adRequest);
 
             var maxRating = sLogic.Select().MaximumRating;
-            FindViewById<TextView>(Resource.Id.txtRatingLimit).Text = string.Format("(1-{0})",maxRating);
+            FindViewById<TextView>(Resource.Id.txtRatingLimit).Text = string.Format("(1-{0})", maxRating);
 
             string mode = Intent.GetStringExtra("Mode");
 

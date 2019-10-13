@@ -1,36 +1,31 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Android.App;
 using Android.Content;
+using Android.Gms.Ads;
 using Android.OS;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using TeamPicker.Logic;
+using System.Collections.Generic;
+using System.Linq;
+using TeamPicker.Adapters;
 using TeamPicker.Classes;
 using TeamPicker.Helpers;
-using System.Collections.ObjectModel;
-using TeamPicker.Adapters;
-using Android.Gms.Ads;
+using TeamPicker.Logic;
 
 namespace TeamPicker
 {
     [Activity(Theme = "@style/Theme.MyTheme")]
     public class SelectionActivity : Activity
     {
-        PlayerLogic pLogic = new PlayerLogic();
-        MatchLogic mLogic = new MatchLogic();
-        SettingsLogic sLogic = new SettingsLogic();      
-        
+        readonly PlayerLogic pLogic = new PlayerLogic();
+        readonly MatchLogic mLogic = new MatchLogic();
+        readonly SettingsLogic sLogic = new SettingsLogic();
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.Selection);
-            
+
             AdView adView = FindViewById<AdView>(Resource.Id.adView);
             AdRequest adRequest = new AdRequest.Builder().Build();
             adView.LoadAd(adRequest);
@@ -82,17 +77,17 @@ namespace TeamPicker
 
             selectAll.CheckedChange += (sender, args) =>
             {
-                foreach(var player in players)
+                foreach (var player in players)
                 {
                     player.Selected = ((CheckBox)sender).Checked;
                     ((BaseAdapter)playerListView.Adapter).NotifyDataSetChanged();
 
-                    FindViewById<TextView>(Resource.Id.selectedNumber).Text = players.Where(x=>x.Selected).Count().ToString();
+                    FindViewById<TextView>(Resource.Id.selectedNumber).Text = players.Where(x => x.Selected).Count().ToString();
                 }
             };
 
             pickTeams.Click += (sender, args) =>
-            {                
+            {
                 PlayerData selectedPlayerData = new PlayerData();
                 List<Player> selectedPlayers = new List<Player>();
 
@@ -102,7 +97,7 @@ namespace TeamPicker
 
                     if (player.Selected == true)
                     {
-                        selectedPlayers.Add(player.Player);                        
+                        selectedPlayers.Add(player.Player);
                     }
                 }
 
@@ -112,7 +107,7 @@ namespace TeamPicker
                 {
                     Toast.MakeText(this, "No players selected.", ToastLength.Short).Show();
                 }
-                else if(selectedPlayerData.Players.Count == 1)
+                else if (selectedPlayerData.Players.Count == 1)
                 {
                     Toast.MakeText(this, "Need a mimimum of two players to pick teams.", ToastLength.Short).Show();
                 }
@@ -146,6 +141,6 @@ namespace TeamPicker
             {
                 StartActivity(typeof(SettingsActivity));
             };
-        }     
+        }
     }
 }

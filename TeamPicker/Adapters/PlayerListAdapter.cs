@@ -1,23 +1,21 @@
-using System;
-using System.Collections.Generic;
 using Android.App;
 using Android.Content;
 using Android.Graphics;
-using Android.OS;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using System;
+using System.Collections.Generic;
 using TeamPicker.Classes;
 
 namespace TeamPicker.Adapters
 {
     public class PlayerListAdapter : BaseAdapter<PlayerSelection>
     {
-        List<PlayerSelection> items;
-        Activity context;
-        bool trafficLightRatings;
-        bool displayNotes;
-        int maxRating;
+        readonly List<PlayerSelection> items;
+        readonly Activity context;
+        readonly bool trafficLightRatings;
+        readonly bool displayNotes;
+        readonly int maxRating;
 
         public PlayerListAdapter(Activity context, List<PlayerSelection> items, bool trafficLightRatings, bool displayNotes, int maxRating) : base()
         {
@@ -62,7 +60,7 @@ namespace TeamPicker.Adapters
             view.FindViewById<TextView>(Resource.Id.playerName).Text = item.Player.PlayerName;
             view.FindViewById<TextView>(Resource.Id.rating).Text = item.Player.Rating.ToString();
 
-            if(displayNotes)
+            if (displayNotes)
             {
                 view.FindViewById<TextView>(Resource.Id.notes).Visibility = ViewStates.Visible;
                 view.FindViewById<TextView>(Resource.Id.notes).Text = item.Player.Notes;

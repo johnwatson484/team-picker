@@ -1,27 +1,19 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
-using TeamPicker.Classes;
 using System.IO;
+using System.Linq;
 using System.Xml.Serialization;
+using TeamPicker.Classes;
 
 namespace TeamPicker.Logic
 {
     public class PlayerLogic
     {
-        static string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-        string fileName = Path.Combine(path, "PlayerData.xml");
+        static readonly string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+        readonly string fileName = Path.Combine(path, "PlayerData.xml");
 
         public void CheckFileExists()
-        {  
+        {
             if (!File.Exists(fileName))
             {
                 string content = @"<?xml version=""1.0"" encoding=""utf - 8"" ?><PlayerData><Version>1.00</Version><Players></Players></PlayerData>";
@@ -34,11 +26,11 @@ namespace TeamPicker.Logic
         {
             PlayerData playerData = DeSerialize();
 
-            foreach(Player player in players)
+            foreach (Player player in players)
             {
                 Player exPlayer = playerData.Players.Where(x => x.PlayerID == player.PlayerID).FirstOrDefault();
 
-                if(exPlayer != null)
+                if (exPlayer != null)
                 {
                     exPlayer.Selections = exPlayer.Selections + 1;
                 }
@@ -67,7 +59,7 @@ namespace TeamPicker.Logic
             {
                 playerData = (PlayerData)serializer.Deserialize(reader);
             }
-            
+
             return playerData;
         }
 

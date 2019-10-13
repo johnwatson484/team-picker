@@ -1,22 +1,17 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Android.App;
 using Android.Content;
-using Android.OS;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using System;
+using System.Collections.Generic;
 using TeamPicker.Classes;
 
 namespace TeamPicker.Adapters
 {
     public class MatchListAdapter : BaseAdapter<Match>
     {
-        List<Match> items;
-        Activity context;
+        readonly List<Match> items;
+        readonly Activity context;
 
         public MatchListAdapter(Activity context, List<Match> items) : base()
         {
@@ -64,12 +59,12 @@ namespace TeamPicker.Adapters
             view.FindViewById<TextView>(Resource.Id.txtMatchTime).Text = item.DatePicked.ToShortTimeString();
 
             view.FindViewById<TextView>(Resource.Id.txtScore).Text = null;
-            
-            view.Click -= OpenViewMatch;            
-            
-            view.Tag = item.MatchID.ToString();            
 
-            view.Click += OpenViewMatch;            
+            view.Click -= OpenViewMatch;
+
+            view.Tag = item.MatchID.ToString();
+
+            view.Click += OpenViewMatch;
 
             return view;
         }
@@ -87,6 +82,6 @@ namespace TeamPicker.Adapters
             context.StartActivity(intent);
 
             context.Finish();
-        }  
+        }
     }
 }

@@ -1,24 +1,20 @@
+using Android.App;
+using Android.Text;
+using Android.Views;
+using Android.Widget;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
-using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using TeamPicker.Classes;
-using Android.Text;
 
 namespace TeamPicker.Adapters
 {
     public class TeamListAdapter : BaseAdapter<Team>
     {
-        List<Team> items;
-        Activity context;
-        string mode;
+        readonly List<Team> items;
+        readonly Activity context;
+        readonly string mode;
 
         public TeamListAdapter(Activity context, List<Team> items, string mode) : base()
         {
@@ -59,15 +55,15 @@ namespace TeamPicker.Adapters
             }
 
             view.FindViewById<TextView>(Resource.Id.txtTeamName).Text = item.TeamName;
-            view.FindViewById<TextView>(Resource.Id.txtTeamRating).Text = string.Format("({0})", item.Players.Sum(x=>x.Rating).ToString());
-            
+            view.FindViewById<TextView>(Resource.Id.txtTeamRating).Text = string.Format("({0})", item.Players.Sum(x => x.Rating).ToString());
+
 
             if (mode == "Create")
             {
                 view.FindViewById<TextView>(Resource.Id.txtTeamScore).Visibility = ViewStates.Invisible;
                 view.FindViewById<TextView>(Resource.Id.teamScore).Visibility = ViewStates.Invisible;
             }
-            
+
             StringBuilder sb = new StringBuilder();
 
             for (int i = 0; i < item.Players.Count; i++)
@@ -78,7 +74,7 @@ namespace TeamPicker.Adapters
             }
 
             view.FindViewById<TextView>(Resource.Id.txtTeamPlayers).Text = sb.ToString();
-            
+
             TextView score = view.FindViewById<TextView>(Resource.Id.teamScore);
 
             score.TextChanged -= UpdateScore;
@@ -87,18 +83,18 @@ namespace TeamPicker.Adapters
 
             view.Tag = item.TeamID.ToString();
             score.Tag = position;
-            
+
             score.TextChanged += UpdateScore;
 
             return view;
-        }        
+        }
 
         private void UpdateScore(object sender, TextChangedEventArgs e)
         {
-            TextView score = (TextView)sender;         
+            TextView score = (TextView)sender;
 
             int position = Convert.ToInt32(score.Tag.ToString());
-                        
+
             var item = items[position];
 
             var x = e.Text;
@@ -106,7 +102,7 @@ namespace TeamPicker.Adapters
 
             int newScore = 0;
 
-            if(!string.IsNullOrEmpty(e.Text.ToString()))
+            if (!string.IsNullOrEmpty(e.Text.ToString()))
             {
                 newScore = Convert.ToInt32(score.Text.ToString());
             }

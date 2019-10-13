@@ -1,20 +1,14 @@
-using System;
 using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
-using System.Threading.Tasks;
-using System.Timers;
 using Android.Gms.Ads;
+using Android.OS;
+using System.Timers;
 
 namespace TeamPicker
 {
     [Activity(Theme = "@style/Theme.MyTheme", MainLauncher = true, NoHistory = true, ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class SplashActivity : Activity
-    {        
-        Timer timer;        
+    {
+        Timer timer;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -37,7 +31,7 @@ namespace TeamPicker
 
         private void StartApplication(object sender, ElapsedEventArgs e)
         {
-            timer.Stop();            
+            timer.Stop();
             StartActivity(typeof(SelectionActivity));
             Finish();
         }

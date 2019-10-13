@@ -1,14 +1,5 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-
-using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using TeamPicker.Classes;
 
 namespace TeamPicker.Helpers
@@ -29,11 +20,11 @@ namespace TeamPicker.Helpers
             var sb = new StringBuilder();
             sb.AppendLine();
 
-            foreach(var team in match.Teams)
+            foreach (var team in match.Teams)
             {
                 sb.AppendLine(team.TeamName);
 
-                foreach(var player in team.Players)
+                foreach (var player in team.Players)
                 {
                     sb.AppendLine(player.PlayerName);
                 }

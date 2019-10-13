@@ -9,11 +9,10 @@ namespace TeamPicker.Logic
 {
     public class MatchLogic
     {
-        static string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-        string fileName = Path.Combine(path, "MatchData_v2.xml");
-
-        PlayerLogic pLogic = new PlayerLogic();
-        SettingsLogic sLogic = new SettingsLogic();
+        static readonly string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+        readonly string fileName = Path.Combine(path, "MatchData_v2.xml");
+        readonly PlayerLogic pLogic = new PlayerLogic();
+        readonly SettingsLogic sLogic = new SettingsLogic();
 
         int totalVariance = 0;
 
@@ -148,7 +147,7 @@ namespace TeamPicker.Logic
                     var eligiblePlayers = matchPlayers.Where(x => !x.Player.UniqueRole).ToList();
                     int playersToUpdate = (int)(eligiblePlayers.Count() * 0.2);
 
-                    for(int i = 0; i < playersToUpdate; i++)
+                    for (int i = 0; i < playersToUpdate; i++)
                     {
                         matchPlayers.Where(x => x.Player.PlayerID == eligiblePlayers[i].Player.PlayerID).FirstOrDefault().Player.UniqueRole = true;
                     }
@@ -179,7 +178,7 @@ namespace TeamPicker.Logic
 
                 int i = 0;
                 do
-                {                    
+                {
                     changesMade = false;
 
                     for (int t = 0; t < match.Teams.Count; t++)
@@ -244,7 +243,7 @@ namespace TeamPicker.Logic
             int top = match.Teams.Max(x => x.Rating);
             int bottom = match.Teams.Min(x => x.Rating);
             totalVariance = top - bottom;
-        }        
+        }
 
         private List<PlayerMatch> CreateMatchPlayersRandom(List<Player> players)
         {

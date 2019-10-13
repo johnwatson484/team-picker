@@ -1,31 +1,25 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Android.App;
 using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
-using TeamPicker.Logic;
-using TeamPicker.Classes;
 using Android.Gms.Ads;
+using Android.OS;
+using Android.Widget;
+using System;
+using TeamPicker.Classes;
+using TeamPicker.Logic;
 
 namespace TeamPicker
 {
     [Activity(Theme = "@style/Theme.MyTheme")]
     public class SettingsActivity : Activity
     {
-        SettingsLogic sLogic = new SettingsLogic();
+        readonly SettingsLogic sLogic = new SettingsLogic();
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.Settings);
-                        
+
             AdView adView = FindViewById<AdView>(Resource.Id.adView);
             AdRequest adRequest = new AdRequest.Builder().Build();
             adView.LoadAd(adRequest);
@@ -68,14 +62,14 @@ namespace TeamPicker
             trafficLightRatings.Checked = settings.TrafficLightRatings;
             displayNotes.Checked = settings.DisplayNotes;
 
-            if(!settings.BalanceTeams)
+            if (!settings.BalanceTeams)
             {
                 highAccuracy.Enabled = false;
             }
 
             balanceTeams.Click += (sender, args) =>
             {
-                if(!((Switch)sender).Checked)
+                if (!((Switch)sender).Checked)
                 {
                     highAccuracy.Enabled = false;
                 }

@@ -1,28 +1,23 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Android.App;
 using Android.Content;
+using Android.Gms.Ads;
 using Android.OS;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Plugin.Share;
+using Plugin.Share.Abstractions;
+using System;
+using TeamPicker.Adapters;
 using TeamPicker.Classes;
 using TeamPicker.Helpers;
 using TeamPicker.Logic;
-using TeamPicker.Adapters;
-using Plugin.Share;
-using Plugin.Share.Abstractions;
-using Android.Gms.Ads;
 
 namespace TeamPicker
 {
     [Activity(Theme = "@style/Theme.MyTheme")]
     public class MatchActivity : Activity
     {
-        MatchLogic mLogic = new MatchLogic();
+        readonly MatchLogic mLogic = new MatchLogic();
         Match match;
         PlayerData selectedPlayers;
 
@@ -52,26 +47,26 @@ namespace TeamPicker
 
                 match = mLogic.PickTeams(selectedPlayers);
 
-                deleteMatch.Visibility = ViewStates.Gone;                                                
+                deleteMatch.Visibility = ViewStates.Gone;
             }
             else
             {
                 Guid matchID = Guid.Parse(mode);
 
                 match = mLogic.SelectByID(matchID);
-                
+
                 rePickTeams.Visibility = ViewStates.Gone;
             }
 
             ListView teamListView = FindViewById<ListView>(Resource.Id.listTeams);
 
             teamListView.Adapter = new TeamListAdapter(this, match.Teams, mode);
-            
+
             saveTeams.Click += (sender, args) =>
             {
                 if (mode == "Create")
                 {
-                    mLogic.Create(match);                    
+                    mLogic.Create(match);
                 }
                 else
                 {
@@ -99,7 +94,7 @@ namespace TeamPicker
                     StartActivity(typeof(MatchListActivity));
                 }
 
-                Finish();                
+                Finish();
             };
 
             deleteMatch.Click += (sender, args) =>
@@ -130,7 +125,7 @@ namespace TeamPicker
 
                     StartActivity(intent);
 
-                    Intent intent2 = new Intent(this, typeof(MatchListActivity));                    
+                    Intent intent2 = new Intent(this, typeof(MatchListActivity));
 
                     StartActivity(intent2);
 
@@ -147,7 +142,7 @@ namespace TeamPicker
 
             shareMatch.Click += (sender, args) =>
             {
-                if(CrossShare.IsSupported)
+                if (CrossShare.IsSupported)
                 {
                     CrossShare.Current.Share(new ShareMessage
                     {

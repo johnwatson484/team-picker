@@ -1,14 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using System.IO;
 using System.Xml.Serialization;
 using TeamPicker.Classes;
@@ -17,8 +6,8 @@ namespace TeamPicker.Logic
 {
     public class SettingsLogic
     {
-        static string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-        string fileName = Path.Combine(path, "SettingsData.xml");
+        static readonly string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+        readonly string fileName = Path.Combine(path, "SettingsData.xml");
 
         public void CheckFileExists()
         {
