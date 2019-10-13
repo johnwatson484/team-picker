@@ -23,8 +23,10 @@ namespace TeamPicker
 
         private void StartTimer()
         {
-            timer = new Timer();
-            timer.Interval = 750;
+            timer = new Timer
+            {
+                Interval = 750
+            };
             timer.Elapsed += new ElapsedEventHandler(StartApplication);
             timer.Start();
         }
