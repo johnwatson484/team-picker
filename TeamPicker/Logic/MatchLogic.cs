@@ -266,30 +266,5 @@ namespace TeamPicker.Logic
 
             return matchPlayers;
         }
-
-        private decimal GenerateRandomNumber(Random random)
-        {
-            decimal r1 = random.Next(1, 1);
-            decimal r2 = random.Next(99);
-
-            decimal stock = 100M;
-
-            decimal gen = r1 + r2 / stock;
-
-            int r3 = random.Next(1, 3);
-
-            decimal final = 0;
-
-            if (r3 == 1)
-            {
-                final = gen;
-            }
-            else
-            {
-                final = gen * -1M;
-            }
-
-            return final;
-        }
     }
 }
