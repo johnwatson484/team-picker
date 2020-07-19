@@ -6,15 +6,6 @@ namespace TeamPicker.Helpers
 {
     public static class StringHelper
     {
-        public static string ReverseString(string s)
-        {
-            char[] arr = s.ToCharArray();
-
-            Array.Reverse(arr);
-
-            return new string(arr);
-        }
-
         public static string WriteMatch(Match match)
         {
             var sb = new StringBuilder();

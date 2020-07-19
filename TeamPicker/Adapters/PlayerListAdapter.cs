@@ -121,7 +121,7 @@ namespace TeamPicker.Adapters
             view.Tag = item.Player.PlayerID.ToString();
             chkBox.Tag = position;
 
-            chkBox.Checked = item.IsSelected();
+            chkBox.Checked = item.Selected;
 
             view.LongClick += OpenUpdatePlayer;
             chkBox.CheckedChange += UpdateCheckStatus;
