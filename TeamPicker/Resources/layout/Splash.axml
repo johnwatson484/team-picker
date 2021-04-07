@@ -33,7 +33,7 @@
             android:shadowDy="1.3"
             android:shadowRadius="1.6" />
         <TextView
-            android:text="© 2018 Lynx Magnus"
+            android:text="© 2021 Lynx Magnus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/splashDeveloper"
