@@ -1,4 +1,5 @@
 [![Build status](https://johnwatson484.visualstudio.com/John%20D%20Watson/_apis/build/status/Team%20Picker)](https://johnwatson484.visualstudio.com/John%20D%20Watson/_build/latest?definitionId=11)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=johnwatson484_team-picker&metric=alert_status)](https://sonarcloud.io/dashboard?id=johnwatson484_team-picker)
 
 # Team Picker
 

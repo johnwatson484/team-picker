@@ -82,7 +82,7 @@ namespace TeamPicker
                     player.Selected = ((CheckBox)sender).Checked;
                     ((BaseAdapter)playerListView.Adapter).NotifyDataSetChanged();
 
-                    FindViewById<TextView>(Resource.Id.selectedNumber).Text = players.Where(x => x.Selected).Count().ToString();
+                    FindViewById<TextView>(Resource.Id.selectedNumber).Text = players.Count(x => x.Selected).ToString();
                 }
             };
 
@@ -95,7 +95,7 @@ namespace TeamPicker
                 {
                     PlayerSelection player = playerListView.Adapter.GetItem(i).Cast<PlayerSelection>();
 
-                    if (player.Selected == true)
+                    if (player.Selected)
                     {
                         selectedPlayers.Add(player.Player);
                     }

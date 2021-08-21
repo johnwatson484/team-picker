@@ -38,7 +38,7 @@ namespace TeamPicker.Logic
 
         public MatchData DeSerialize()
         {
-            MatchData matchData = new MatchData();
+            MatchData matchData;
 
             XmlSerializer serializer = new XmlSerializer(typeof(MatchData));
 
@@ -63,7 +63,7 @@ namespace TeamPicker.Logic
         {
             MatchData matchData = DeSerialize();
 
-            Match match = matchData.Matches.Where(x => x.MatchID == matchID).FirstOrDefault();
+            Match match = matchData.Matches.FirstOrDefault(x => x.MatchID == matchID);
 
             return match;
         }
@@ -84,13 +84,13 @@ namespace TeamPicker.Logic
         {
             MatchData matchData = DeSerialize();
 
-            Match exMatch = matchData.Matches.Where(x => x.MatchID == match.MatchID).FirstOrDefault();
+            Match exMatch = matchData.Matches.FirstOrDefault(x => x.MatchID == match.MatchID);
 
             if (exMatch != null)
             {
                 foreach (Team team in match.Teams)
                 {
-                    Team exTeam = exMatch.Teams.Where(x => x.TeamID == team.TeamID).FirstOrDefault();
+                    Team exTeam = exMatch.Teams.FirstOrDefault(x => x.TeamID == team.TeamID);
 
                     if (exTeam != null)
                     {
@@ -106,7 +106,7 @@ namespace TeamPicker.Logic
         {
             MatchData matchData = DeSerialize();
 
-            Match match = matchData.Matches.Where(x => x.MatchID == matchID).FirstOrDefault();
+            Match match = matchData.Matches.FirstOrDefault(x => x.MatchID == matchID);
 
             if (match != null)
             {
@@ -145,11 +145,11 @@ namespace TeamPicker.Logic
                 if (!settings.HighAccuracy)
                 {
                     var eligiblePlayers = matchPlayers.Where(x => !x.Player.UniqueRole).ToList();
-                    int playersToUpdate = (int)(eligiblePlayers.Count() * 0.2);
+                    int playersToUpdate = (int)(eligiblePlayers.Count * 0.2);
 
                     for (int i = 0; i < playersToUpdate; i++)
                     {
-                        matchPlayers.Where(x => x.Player.PlayerID == eligiblePlayers[i].Player.PlayerID).FirstOrDefault().Player.UniqueRole = true;
+                        matchPlayers.FirstOrDefault(x => x.Player.PlayerID == eligiblePlayers[i].Player.PlayerID).Player.UniqueRole = true;
                     }
                 }
 

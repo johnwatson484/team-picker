@@ -31,7 +31,7 @@ namespace TeamPicker.Logic
 
         public SettingsData DeSerialize()
         {
-            SettingsData settingsData = new SettingsData();
+            SettingsData settingsData;
 
             XmlSerializer serializer = new XmlSerializer(typeof(SettingsData));
 

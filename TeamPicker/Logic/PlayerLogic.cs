@@ -28,7 +28,7 @@ namespace TeamPicker.Logic
 
             foreach (Player player in players)
             {
-                Player exPlayer = playerData.Players.Where(x => x.PlayerID == player.PlayerID).FirstOrDefault();
+                Player exPlayer = playerData.Players.FirstOrDefault(x => x.PlayerID == player.PlayerID);
 
                 if (exPlayer != null)
                 {
@@ -51,7 +51,7 @@ namespace TeamPicker.Logic
 
         public PlayerData DeSerialize()
         {
-            PlayerData playerData = new PlayerData();
+            PlayerData playerData;
 
             XmlSerializer serializer = new XmlSerializer(typeof(PlayerData));
 
@@ -87,7 +87,7 @@ namespace TeamPicker.Logic
         {
             PlayerData playerData = DeSerialize();
 
-            Player player = playerData.Players.Where(x => x.PlayerID == playerID).FirstOrDefault();
+            Player player = playerData.Players.FirstOrDefault(x => x.PlayerID == playerID);
 
             return player;
         }
@@ -105,7 +105,7 @@ namespace TeamPicker.Logic
         {
             PlayerData playerData = DeSerialize();
 
-            Player exPlayer = playerData.Players.Where(x => x.PlayerID == player.PlayerID).FirstOrDefault();
+            Player exPlayer = playerData.Players.FirstOrDefault(x => x.PlayerID == player.PlayerID);
 
             if (exPlayer != null)
             {
@@ -122,7 +122,7 @@ namespace TeamPicker.Logic
         {
             PlayerData playerData = DeSerialize();
 
-            Player player = playerData.Players.Where(x => x.PlayerID == playerID).FirstOrDefault();
+            Player player = playerData.Players.FirstOrDefault(x => x.PlayerID == playerID);
 
             if (player != null)
             {
