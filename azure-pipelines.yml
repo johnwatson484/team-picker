@@ -46,11 +46,5 @@ steps:
     action: 'SingleApk'
     apkFile: '**/*-Signed.apk'
     track: 'production'
-    changeLogFile: '**/Files/ReleaseNotes.txt'
+    changeLogFile: 'Files/ReleaseNotes.txt'
     languageCode: 'en-GB'
-
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(agent.builddirectory)'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
