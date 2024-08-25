@@ -33,7 +33,7 @@ steps:
 
 - task: AndroidSigning@3
   inputs:
-    apkFiles: '$(build.binariesdirectory)/$(BuildConfiguration)/*.apk'
+    apkFiles: '$(BuildDirectory)/*.apk'
     apksignerKeystoreFile: KeyStore.keystore
     apksignerKeystorePassword: $(keyStorePassword)
     apksignerKeystoreAlias: TeamPicker
