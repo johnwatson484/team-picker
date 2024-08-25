@@ -21,7 +21,7 @@ steps:
   inputs:
     command: 'build'
     projects: '**/*.sln'
-    arguments: '-c Release'
+    arguments: '-c Release -f net8.0-android'
 
 - task: SonarCloudAnalyze@2
   inputs:
