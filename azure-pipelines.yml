@@ -10,6 +10,11 @@ pool:
   vmImage: windows-latest
 
 steps:
+- task: DownloadSecureFile@1
+  displayName: Download KeyStore file
+  inputs:
+    secureFile: KeyStore.keystore
+
 - task: SonarCloudPrepare@2
   inputs:
     SonarCloud: 'SonarCloud'
