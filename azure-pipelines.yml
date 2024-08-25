@@ -19,9 +19,11 @@ steps:
 
 - task: DotNetCoreCLI@2
   inputs:
-    command: 'build'
+    command: 'publish'
+    publishWebProjects: false
     projects: '**/*.sln'
-    arguments: '-c Release -f net8.0-android'
+    arguments: '-p:AndroidKeyStore=true -p:AndroidSigningKeyStore=KeyStore.keystore -p:AndroidSigningKeyAlias=TeamPicker -p:AndroidSigningKeyPass=env:$(keyStorePassword) -p:AndroidSigningStorePass=$(keyStorePassword)'
+    zipAfterPublish: false
 
 - task: SonarCloudAnalyze@2
   inputs:
@@ -31,10 +33,8 @@ steps:
   inputs:
     pollingTimeoutSec: '300'
 
-- task: AndroidSigning@3
+- task: PublishBuildArtifacts@1
   inputs:
-    apkFiles: '$(BuildDirectory)/*.apk'
-    apksignerKeystoreFile: KeyStore.keystore
-    apksignerKeystorePassword: $(keyStorePassword)
-    apksignerKeystoreAlias: TeamPicker
-    apksignerKeyPassword: $(keyStorePassword)
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
