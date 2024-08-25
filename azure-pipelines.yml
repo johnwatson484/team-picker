@@ -22,6 +22,7 @@ steps:
     organization: 'johnwatson484'
     scannerMode: 'MSBuild'
     projectKey: 'johnwatson484_team-picker'
+    projectName: 'team-picker'
 
 - task: DotNetCoreCLI@2
   inputs:
