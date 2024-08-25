@@ -3,6 +3,7 @@ using Android.Content;
 using Android.Gms.Ads;
 using Android.OS;
 using Android.Widget;
+using Microsoft.Maui.ApplicationModel;
 using System;
 using TeamPicker.Classes;
 using TeamPicker.Logic;
@@ -17,6 +18,7 @@ namespace TeamPicker
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            Platform.Init(this, savedInstanceState);
 
             SetContentView(Resource.Layout.Settings);
 

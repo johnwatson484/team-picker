@@ -1,6 +1,7 @@
 ﻿using Android.App;
 using Android.OS;
 using Android.Widget;
+using Microsoft.Maui.ApplicationModel;
 using System.Text;
 
 namespace TeamPicker
@@ -11,6 +12,7 @@ namespace TeamPicker
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            Platform.Init(this, savedInstanceState);
 
             SetContentView(Resource.Layout.Privacy);
 

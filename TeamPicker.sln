@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamPicker", "TeamPicker\TeamPicker.csproj", "{414EEE45-0379-4617-BA8B-CEC1F4D4F68F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamPicker", "TeamPicker\TeamPicker.csproj", "{17626299-00F8-4DCF-A62A-CEAEB2F9B70A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,17 +11,17 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{414EEE45-0379-4617-BA8B-CEC1F4D4F68F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{414EEE45-0379-4617-BA8B-CEC1F4D4F68F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{414EEE45-0379-4617-BA8B-CEC1F4D4F68F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{414EEE45-0379-4617-BA8B-CEC1F4D4F68F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{414EEE45-0379-4617-BA8B-CEC1F4D4F68F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{414EEE45-0379-4617-BA8B-CEC1F4D4F68F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{17626299-00F8-4DCF-A62A-CEAEB2F9B70A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17626299-00F8-4DCF-A62A-CEAEB2F9B70A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17626299-00F8-4DCF-A62A-CEAEB2F9B70A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{17626299-00F8-4DCF-A62A-CEAEB2F9B70A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17626299-00F8-4DCF-A62A-CEAEB2F9B70A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17626299-00F8-4DCF-A62A-CEAEB2F9B70A}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {0E8CD43E-57BE-44DF-976F-F0AA3FD09C77}
+		SolutionGuid = {A243B353-0FBC-47FB-B070-6DDCC89108DA}
 	EndGlobalSection
 EndGlobal

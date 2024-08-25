@@ -4,13 +4,12 @@ using Android.Gms.Ads;
 using Android.OS;
 using Android.Views;
 using Android.Widget;
-using Plugin.Share;
-using Plugin.Share.Abstractions;
 using System;
 using TeamPicker.Adapters;
 using TeamPicker.Classes;
 using TeamPicker.Helpers;
 using TeamPicker.Logic;
+using Microsoft.Maui.ApplicationModel.DataTransfer;
 
 namespace TeamPicker
 {
@@ -140,20 +139,14 @@ namespace TeamPicker
                 alertDialog.Show();
             };
 
-            shareMatch.Click += (sender, args) =>
+            shareMatch.Click += async (sender, args) =>
             {
-                if (CrossShare.IsSupported)
+                await Share.Default.RequestAsync(new ShareTextRequest
                 {
-                    CrossShare.Current.Share(new ShareMessage
-                    {
-                        Title = "I just picked these teams using Team Picker!",
-                        Text = StringHelper.WriteMatch(match)
-                    },
-                    new ShareOptions
-                    {
-                        ChooserTitle = "Share Teams"
-                    });
-                }
+                    Title = "I just picked these teams using Team Picker!",
+                    Text = StringHelper.WriteMatch(match),
+                        
+                });
             };
         }
     }

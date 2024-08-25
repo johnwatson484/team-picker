@@ -1,6 +1,7 @@
 using Android.App;
 using Android.Gms.Ads;
 using Android.OS;
+using Microsoft.Maui.ApplicationModel;
 using System.Timers;
 
 namespace TeamPicker
@@ -8,22 +9,23 @@ namespace TeamPicker
     [Activity(Theme = "@style/Theme.MyTheme", MainLauncher = true, NoHistory = true, ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class SplashActivity : Activity
     {
-        Timer timer;
+        System.Timers.Timer timer;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            Platform.Init(this, savedInstanceState);
 
             SetContentView(Resource.Layout.Splash);
 
-            MobileAds.Initialize(this, "ca-app-pub-5054611580618782~9254042917");
+            MobileAds.Initialize(this);
 
             StartTimer();
         }
 
         private void StartTimer()
         {
-            timer = new Timer
+            timer = new System.Timers.Timer
             {
                 Interval = 750
             };

@@ -9,7 +9,7 @@ namespace TeamPicker.Logic
 {
     public class PlayerLogic
     {
-        static readonly string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+        static readonly string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData);
         readonly string fileName = Path.Combine(path, "PlayerData.xml");
 
         public void CheckFileExists()

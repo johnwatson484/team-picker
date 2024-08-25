@@ -9,7 +9,7 @@ namespace TeamPicker.Logic
 {
     public class MatchLogic
     {
-        static readonly string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+        static readonly string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData);
         readonly string fileName = Path.Combine(path, "MatchData_v2.xml");
         readonly PlayerLogic pLogic = new PlayerLogic();
         readonly SettingsLogic sLogic = new SettingsLogic();

@@ -6,7 +6,7 @@ namespace TeamPicker.Logic
 {
     public class SettingsLogic
     {
-        static readonly string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+        static readonly string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData);
         readonly string fileName = Path.Combine(path, "SettingsData.xml");
 
         public void CheckFileExists()
