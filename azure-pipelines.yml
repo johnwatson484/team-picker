@@ -39,15 +39,15 @@ steps:
   inputs:
     pollingTimeoutSec: '300'
 
-# - task: GooglePlayRelease@4
-#   inputs:
-#     serviceConnection: 'Google Play'
-#     applicationId: teampicker.teampicker
-#     action: 'SingleApk'
-#     apkFile: '*signed*.apk'
-#     track: 'production'
-#     changeLogFile: 'Files/ReleaseNotes.txt'
-#     languageCode: 'en-GB'
+- task: GooglePlayRelease@4
+  inputs:
+    serviceConnection: 'Google Play'
+    applicationId: teampicker.teampicker
+    action: 'SingleApk'
+    apkFile: '**/*-Signed.apk'
+    track: 'production'
+    changeLogFile: '**/Files/ReleaseNotes.txt'
+    languageCode: 'en-GB'
 
 - task: PublishBuildArtifacts@1
   inputs:
