@@ -28,7 +28,7 @@ steps:
     command: 'publish'
     publishWebProjects: false
     projects: '**/*.sln'
-    arguments: '-p:AndroidKeyStore=true -p:AndroidSigningKeyStore=$(keyStoreFile.secureFilePath) -p:AndroidSigningKeyAlias=TeamPicker -p:AndroidSigningKeyPass=env:$(keyStorePassword) -p:AndroidSigningStorePass=$(keyStorePassword)'
+    arguments: '-p:AndroidKeyStore=true -p:AndroidSigningKeyStore=$(keyStoreFile.secureFilePath) -p:AndroidSigningKeyAlias=TeamPicker -p:AndroidSigningKeyPass=$(keyStorePassword) -p:AndroidSigningStorePass=$(keyStorePassword)'
     zipAfterPublish: false
 
 - task: SonarCloudAnalyze@2
