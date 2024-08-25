@@ -6,8 +6,8 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationId>teampicker.teampicker</ApplicationId>
-    <ApplicationVersion>35</ApplicationVersion>
-    <ApplicationDisplayVersion>35.0</ApplicationDisplayVersion>
+    <ApplicationVersion>36</ApplicationVersion>
+    <ApplicationDisplayVersion>36.0</ApplicationDisplayVersion>
     <RuntimeIdentifiers>android-arm;android-arm64;android-x86;android-x64</RuntimeIdentifiers>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
