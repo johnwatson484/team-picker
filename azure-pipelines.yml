@@ -31,3 +31,10 @@ steps:
   inputs:
     pollingTimeoutSec: '300'
 
+- task: AndroidSigning@3
+  inputs:
+    apkFiles: '$(build.binariesdirectory)/$(BuildConfiguration)/*.apk'
+    apksignerKeystoreFile: KeyStore.keystore
+    apksignerKeystorePassword: $(keyStorePassword)
+    apksignerKeystoreAlias: TeamPicker
+    apksignerKeyPassword: $(keyStorePassword)
