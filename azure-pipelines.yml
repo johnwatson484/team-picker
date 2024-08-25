@@ -12,6 +12,7 @@ pool:
 steps:
 - task: DownloadSecureFile@1
   displayName: Download KeyStore file
+  name: keyStoreFile
   inputs:
     secureFile: KeyStore.keystore
 
@@ -27,7 +28,7 @@ steps:
     command: 'publish'
     publishWebProjects: false
     projects: '**/*.sln'
-    arguments: '-p:AndroidKeyStore=true -p:AndroidSigningKeyStore=KeyStore.keystore -p:AndroidSigningKeyAlias=TeamPicker -p:AndroidSigningKeyPass=env:$(keyStorePassword) -p:AndroidSigningStorePass=$(keyStorePassword)'
+    arguments: '-p:AndroidKeyStore=true -p:AndroidSigningKeyStore=$(keyStoreFile.secureFilePath) -p:AndroidSigningKeyAlias=TeamPicker -p:AndroidSigningKeyPass=env:$(keyStorePassword) -p:AndroidSigningStorePass=$(keyStorePassword)'
     zipAfterPublish: false
 
 - task: SonarCloudAnalyze@2
@@ -37,6 +38,16 @@ steps:
 - task: SonarCloudPublish@2
   inputs:
     pollingTimeoutSec: '300'
+
+# - task: GooglePlayRelease@4
+#   inputs:
+#     serviceConnection: 'Google Play'
+#     applicationId: teampicker.teampicker
+#     action: 'SingleApk'
+#     apkFile: '*signed*.apk'
+#     track: 'production'
+#     changeLogFile: 'Files/ReleaseNotes.txt'
+#     languageCode: 'en-GB'
 
 - task: PublishBuildArtifacts@1
   inputs:
