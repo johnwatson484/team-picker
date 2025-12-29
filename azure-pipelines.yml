@@ -25,10 +25,11 @@ steps:
     projectName: 'team-picker'
 
 - task: DotNetCoreCLI@2
-  displayName: 'Restore Android workload'
+  displayName: Install Android workload
   inputs:
     command: 'custom'
     custom: 'workload'
+    arguments: 'install android'
 
 - task: DotNetCoreCLI@2
   inputs:
