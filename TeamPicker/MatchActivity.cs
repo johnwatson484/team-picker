@@ -26,6 +26,13 @@ namespace TeamPicker
 
             SetContentView(Resource.Layout.Match);
 
+            if (Build.VERSION.SdkInt >= BuildVersionCodes.R)
+            {
+                Window.InsetsController?.SetSystemBarsAppearance(
+                    (int)WindowInsetsControllerAppearance.LightStatusBars,
+                    (int)WindowInsetsControllerAppearance.LightStatusBars);
+            }
+
             AdView adView = FindViewById<AdView>(Resource.Id.adView);
             AdRequest adRequest = new AdRequest.Builder().Build();
             adView.LoadAd(adRequest);

@@ -1,5 +1,6 @@
 ﻿using Android.App;
 using Android.OS;
+using Android.Views;
 using Android.Widget;
 using Microsoft.Maui.ApplicationModel;
 using System.Text;
@@ -12,9 +13,17 @@ namespace TeamPicker
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+
             Platform.Init(this, savedInstanceState);
 
             SetContentView(Resource.Layout.Privacy);
+
+            if (Build.VERSION.SdkInt >= BuildVersionCodes.R)
+            {
+                Window.InsetsController?.SetSystemBarsAppearance(
+                    (int)WindowInsetsControllerAppearance.LightStatusBars,
+                    (int)WindowInsetsControllerAppearance.LightStatusBars);
+            }
 
             ImageButton cancelPrivacy = FindViewById<ImageButton>(Resource.Id.btnCancelPrivacy);
             TextView privacyText = FindViewById<TextView>(Resource.Id.txtPrivacyDetails);

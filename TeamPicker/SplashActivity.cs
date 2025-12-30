@@ -1,6 +1,7 @@
 using Android.App;
 using Android.Gms.Ads;
 using Android.OS;
+using Android.Views;
 using Microsoft.Maui.ApplicationModel;
 using System.Timers;
 
@@ -14,9 +15,17 @@ namespace TeamPicker
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+
             Platform.Init(this, savedInstanceState);
 
             SetContentView(Resource.Layout.Splash);
+
+            if (Build.VERSION.SdkInt >= BuildVersionCodes.R)
+            {
+                Window.InsetsController?.SetSystemBarsAppearance(
+                    (int)WindowInsetsControllerAppearance.LightStatusBars,
+                    (int)WindowInsetsControllerAppearance.LightStatusBars);
+            }
 
             MobileAds.Initialize(this);
 
