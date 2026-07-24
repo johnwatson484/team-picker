@@ -1,12 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net9.0-android35.0</TargetFramework>
+    <TargetFramework>net9.0-android36.0</TargetFramework>
     <OutputType>Exe</OutputType>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationId>teampicker.teampicker</ApplicationId>
-    <ApplicationVersion>36</ApplicationVersion>
-    <ApplicationDisplayVersion>36.0</ApplicationDisplayVersion>
+    <ApplicationVersion>40</ApplicationVersion>
+    <ApplicationDisplayVersion>40.0</ApplicationDisplayVersion>
     <RuntimeIdentifiers>android-arm;android-arm64;android-x86;android-x64</RuntimeIdentifiers>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
